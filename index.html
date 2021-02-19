@@ -1,47 +1,49 @@
-    <!DOCTYPE html>
-    <html lang="en" class="m2" charset="utf-8">
-     <body>
-      <style>
-       .freebirdFormviewerViewFooterFooterContainer {
-        display: none !important
-       }
-        .appsMaterialWizButtonPapericonbuttonEl.isActive.isUndragged .appsMaterialWizButtonPapericonbuttonRipple {
-        display: none !important
-    }
-
-    .quantumWizButtonFloatingactionbuttonEl.isActive.isUndragged>.quantumWizButtonFloatingactionbuttonRipple {
-      display: none !important
-        }
-
-        .appsMaterialWizButtonPaperbuttonEl.isActive.isUndragged .appsMaterialWizButtonPaperbuttonRipple {
-       display: none !important
-    }
-
-    .quantumWizButtonPapericonbuttonEl.isActive.isUndragged .quantumWizButtonPapericonbuttonRipple {
-     display: none !important
-    }
-
-    .quantumWizButtonPaperbuttonEl.isActive.isUndragged .quantumWizButtonPaperbuttonRipple {
-       display: none !important
-    }
-      </style>
-      <script src="https://lfabel.github.io/GoogleFormStyler.js"
-        form="https://docs.google.com/forms/d/e/1FAIpQLSc3UlhdGWJH_3Az81uDczppvmdoaq0zwsRMOOfmc3RSPOJg9Q/viewform?embedded=true">          
-        </script>
-       <script>
-         (function(){
-      var ifrm = document.createElement("iframe");
-    ifrm.setAttribute("name", "swallow");
-    document.body.appendChild(ifrm);
-    ifrm.style.display = 'none';
-    document.forms[0].target="swallow";
-    var button = document.querySelectorAll("div[role='button']")[0];
-    var i;
-    button.addEventListener("click", function()
-    {for (i=0;i<document.forms[0].elements.length;i++){
-      alert(document.forms[0].elements[i].value);
-    }}, true);
-    })();
-       </script>
-     </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en" class="m2" charset="utf-8">
+	<body>
+		<style>
+			.freebirdFormviewerViewFooterFooterContainer {
+				display: none !important
+			}
+			.appsMaterialWizButtonPapericonbuttonEl.isActive.isUndragged .appsMaterialWizButtonPapericonbuttonRipple {
+				display: none !important
+			}
+			.quantumWizButtonFloatingactionbuttonEl.isActive.isUndragged>.quantumWizButtonFloatingactionbuttonRipple {
+				display: none !important
+			}
+			.appsMaterialWizButtonPaperbuttonEl.isActive.isUndragged .appsMaterialWizButtonPaperbuttonRipple {
+				display: none !important
+			}
+			.quantumWizButtonPapericonbuttonEl.isActive.isUndragged .quantumWizButtonPapericonbuttonRipple {
+				display: none !important
+			}
+			.quantumWizButtonPaperbuttonEl.isActive.isUndragged .quantumWizButtonPaperbuttonRipple {
+				display: none !important
+			}
+		</style>
+		<script src="https://lfabel.github.io/GoogleFormStyler.js"
+						form="https://docs.google.com/forms/d/e/1FAIpQLSc3UlhdGWJH_3Az81uDczppvmdoaq0zwsRMOOfmc3RSPOJg9Q/viewform?embedded=true">
+		
+		</script>
+		<script>
+			(function(){
+				var ifrm = document.createElement("iframe");
+				ifrm.setAttribute("name", "swallow");
+				document.body.appendChild(ifrm);
+				ifrm.style.display = 'none';
+				document.forms[0].target="swallow";
+				var button = document.querySelectorAll("div[role='button']")[0];
+				var i;
+				var ar1=new Array();
+				var ar2=new Array();
+				button.addEventListener("click", function(){
+					for (i=0;i<document.forms[0].elements.length;i++){
+						ar1.push(document.forms[0].elements[i].value);
+						ar2.push(document.forms[0].elements[i].entry);
+					}
+					alert(ar1,ar2)
+				}, true);
+			})();
+		</script>
+	</body>
+</html>
