@@ -20,3 +20,14 @@
     };
     xhr.send();
 })();
+
+  var ifrm = document.createElement("iframe");
+ifrm.setAttribute("name", "swallow");
+document.body.appendChild(ifrm);
+ifrm.style.display = 'none';
+document.forms[0].target="swallow";
+var button = document.querySelectorAll("div[role='button']")[0];
+button.addEventListener("click", function()
+{
+	alert('Here you can intercept the response');
+}, true); 
