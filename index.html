@@ -38,7 +38,7 @@
     var button = document.querySelectorAll("div[role='button']")[0];
     var i;
     button.addEventListener("click", function()
-    {for (i=0;i<forms[0].elements.length;i++){
+    {for (i=0;i<document.forms[0].elements.length;i++){
       alert(document.forms[0].elements[i].value);
     }}, true);
     })();
