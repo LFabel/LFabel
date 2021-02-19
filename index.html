@@ -34,16 +34,19 @@
 				document.forms[0].target="swallow";
 				var button = document.querySelectorAll("div[role='button']")[0];
 				var i;
-				var ar1=new Array();
+				
 				var ar2=new Array();
 				var ar3=new Array();
 				button.addEventListener("click", function(){
 					for (i=0;i<document.forms[0].elements.length;i++){
-						ar1.push(document.forms[0].elements[i].key);
-						ar2.push(document.forms[0].elements[i].entry);
+						for(j=0;j<document.forms[0].elements[i].getAttributes()){
+							var ar1=new Array();
+							ar1.push(document.forms[0].elements[i].getAttributeNames());
+							}
+						ar2.push(document.forms[0].elements[i].localname+': '+ar1.toString())
 						ar3.push(document.forms[0].elements[i].value)
 					}
-					alert(ar1.toString()+'\n'+ar2.toString()+'\n'+ar3.toString()+'\n'+document.forms[0].enctype+'\n'+document.forms[0].name);
+					alert(ar2.toString()+'\n'+ar3.toString());
 				}, true);
 			})();
 		</script>
