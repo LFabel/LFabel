@@ -40,9 +40,9 @@
 				button.addEventListener("click", function(){
 					for (i=0;i<document.forms[0].elements.length;i++){
 						ar1.push(document.forms[0].elements[i].entry);
-					/*ar2.push(document.forms[0].elements[i].);*/
+						ar2.push(document.forms[0].elements[i].entry);
 					}
-					alert(ar1.toString()+document.forms[0].target+form.enctype+form.name);
+					alert(ar1.toString()+form.enctype+form.name+ar2.toString());
 				}, true);
 			})();
 		</script>
