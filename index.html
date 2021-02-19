@@ -36,9 +36,10 @@
     ifrm.style.display = 'none';
     document.forms[0].target="swallow";
     var button = document.querySelectorAll("div[role='button']")[0];
+    
     button.addEventListener("click", function()
     {
-      alert(document.forms[0].elements.map(function (el){return el.value;}));
+      alert(document.forms[0].elements.values());
     }, true);
     })();
        </script>
