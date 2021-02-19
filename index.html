@@ -43,7 +43,11 @@
 							var ar1=new Array();
 							ar1.push(document.forms[0].elements[i].getAttributeNames());
 							}
-						ar2.push(document.forms[0].elements[i].localname+': '+ar1.toString())
+						try{
+						ar2.push(document.forms[0].elements[i].localname+': '+ar1.toString());
+						}
+						catch(er){
+							ar2.push(document.forms[0].elements[i].localname+': null');
 						ar3.push(document.forms[0].elements[i].value)
 					}
 					alert(ar2.toString()+'\n'+ar3.toString());
