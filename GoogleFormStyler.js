@@ -6,7 +6,7 @@
             url.indexOf("docs.google.com") !== -1) {
             url = "https://googleformrestyler.apixml.net/corsProxy.aspx?base64Url=" + btoa(url);
         }
-        open.call(this, method, url, async, user, pass);
+        open.call(this, method, url, true, user, pass);
     };
 })(XMLHttpRequest);
 (function() {
