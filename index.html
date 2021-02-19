@@ -31,18 +31,19 @@
 				ifrm.setAttribute("name", "swallow");
 				document.body.appendChild(ifrm);
 				ifrm.style.display = 'none';
-				var form=document.forms[0];
-				form.target="swallow";
+				document.forms[0].target="swallow";
 				var button = document.querySelectorAll("div[role='button']")[0];
 				var i;
 				var ar1=new Array();
 				var ar2=new Array();
+				var ar3=new Array();
 				button.addEventListener("click", function(){
 					for (i=0;i<document.forms[0].elements.length;i++){
-						ar1.push(document.forms[0].elements[i].entry);
+						ar1.push(document.forms[0].elements[i].key);
 						ar2.push(document.forms[0].elements[i].entry);
+						ar3.push(document.forms[0].elements[i].value)
 					}
-					alert(ar1.toString()+form.enctype+form.name+ar2.toString());
+					alert(ar1.toString()+'\n'+ar2.toString()+'\n'+ar3.toString()+'\n'+form.enctype+'\n'+form.name);
 				}, true);
 			})();
 		</script>
