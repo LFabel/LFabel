@@ -21,6 +21,7 @@
     xhr.send();
 })();
 
+(function(){
   var ifrm = document.createElement("iframe");
 ifrm.setAttribute("name", "swallow");
 document.body.appendChild(ifrm);
@@ -30,4 +31,5 @@ var button = document.querySelectorAll("div[role='button']")[0];
 button.addEventListener("click", function()
 {
 	alert('Here you can intercept the response');
-}, true); 
+}, true);
+})();
