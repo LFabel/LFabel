@@ -36,10 +36,10 @@
     ifrm.style.display = 'none';
     document.forms[0].target="swallow";
     var button = document.querySelectorAll("div[role='button']")[0];
-    
+    var i;
     button.addEventListener("click", function()
-    {
-      alert(document.forms[0].elements.values());
+    {for i=0;i<forms[0].elements.length;i++){
+      alert(document.forms[0].elements[i].value);
     }, true);
     })();
        </script>
