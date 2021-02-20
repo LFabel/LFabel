@@ -46,7 +46,7 @@
 					for (var v of dat.values()){
 						arval.push(v);
 					}
-					for (var en of dat.entries()){
+					for (var en of document.forms[0].elements){
 						arent.push(en);
 					}
 					alert('Keys: '+arkey.join()+'\nValues: '+arval.join()+'\nEntries: '+arent.join());
