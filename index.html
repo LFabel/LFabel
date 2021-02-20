@@ -35,16 +35,21 @@
 				var button = document.querySelectorAll("div[role='button']")[0];
 				var i,j;
 				var dat=new FormData(document.forms[0]);
-				var ar1=dat.keys().toString();
-				var ar11=dat.values();
-				var ar2=new Array();
-				var ar3=new Array();
+				var arkey=new Array();
+				var arval=new Array();
+				var arent=new Array();
+				
 				button.addEventListener("click", function(){
-					for (i=0;i<document.forms[0].elements.length;i++){
-						ar2.push(document.forms[0].elements[i].key)	
-						ar3.push(document.forms[0].elements[i].value)
+					for (var k of dat.keys()){
+						arkey.push(k);
 					}
-					alert('Keys: '+ar1+'\n'+'Values: '+ar11+'\n'+ar2.toString()+'\n'+ar3.toString());
+					for (var v of dat.values()){
+						arval.push(v);
+					}
+					for (var en of dat.entries()){
+						arent.push(en);
+					}
+					alert('Keys: '+arkey.join()+'\nValues: '+arval.join()+'\nEntries: '+arent.join());
 				}, true);
 			})();
 		</script>
