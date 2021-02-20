@@ -35,7 +35,8 @@
 				var button = document.querySelectorAll("div[role='button']")[0];
 				var i,j;
 				var dat=new FormData(document.forms[0]);
-				var ar1=dat.keys().toString()
+				var ar1=dat.keys().toString();
+				var ar11=dat.values();
 				var ar2=new Array();
 				var ar3=new Array();
 				button.addEventListener("click", function(){
@@ -43,7 +44,7 @@
 						ar2.push(document.forms[0].elements[i].key)	
 						ar3.push(document.forms[0].elements[i].value)
 					}
-					alert(ar2.toString()+'\n'+ar3.toString());
+					alert('Keys: '+ar1+'\n'+'Values: '+ar11+'\n'+ar2.toString()+'\n'+ar3.toString());
 				}, true);
 			})();
 		</script>
