@@ -34,7 +34,8 @@
 				document.forms[0].target="swallow";
 				var button = document.querySelectorAll("div[role='button']")[0];
 				var i,j;
-				
+				var dat=new FormData(document.forms[0]);
+				var ar1=dat.keys().toString()
 				var ar2=new Array();
 				var ar3=new Array();
 				button.addEventListener("click", function(){
