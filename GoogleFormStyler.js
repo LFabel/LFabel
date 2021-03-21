@@ -12,6 +12,7 @@
     };
 })(XMLHttpRequest);
 (function() {
+    const us = new Intl.Locale('en-US')
     var script = document.currentScript ||
         /*Polyfill*/ Array.prototype.slice.call(document.getElementsByTagName('script')).pop();
     var URL = script.getAttribute('form');
