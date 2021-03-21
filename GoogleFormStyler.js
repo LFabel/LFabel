@@ -19,7 +19,7 @@
     var xhr = new XMLHttpRequest();
     xhr.open("GET", URL);
     xhr.onload = function() {
-        document.write(xhr.response);
+        document.write(xhr.response.replace(/\"ar\"/g,"en");
     };
     xhr.send();
 })();
