@@ -1,4 +1,6 @@
+
 (function (XHR) {
+    const us = new Intl.Locale('en-US')
     var open = XHR.prototype.open;
     XHR.prototype.open = function (method, url, async, user, pass) {
         this._url = url;
