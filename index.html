@@ -2,27 +2,12 @@
 <html lang="en" class="m2" charset="utf-8">
 	<body>
 		<style>
-			.freebirdFormviewerViewFooterFooterContainer {
-				display: none !important
-			}
-			.appsMaterialWizButtonPapericonbuttonEl.isActive.isUndragged .appsMaterialWizButtonPapericonbuttonRipple {
-				display: none !important
-			}
-			.quantumWizButtonFloatingactionbuttonEl.isActive.isUndragged>.quantumWizButtonFloatingactionbuttonRipple {
-				display: none !important
-			}
-			.appsMaterialWizButtonPaperbuttonEl.isActive.isUndragged .appsMaterialWizButtonPaperbuttonRipple {
-				display: none !important
-			}
-			.quantumWizButtonPapericonbuttonEl.isActive.isUndragged .quantumWizButtonPapericonbuttonRipple {
-				display: none !important
-			}
-			.quantumWizButtonPaperbuttonEl.isActive.isUndragged .quantumWizButtonPaperbuttonRipple {
-				display: none !important
-			}
+		.m2.freebirdFormviewerViewHeaderHeader {
+    	display: none;
+}
 		</style>
 		<script src="https://lfabel.github.io/GoogleFormStyler.js"
-						form="https://docs.google.com/forms/d/e/1FAIpQLSc3UlhdGWJH_3Az81uDczppvmdoaq0zwsRMOOfmc3RSPOJg9Q/viewform?embedded=true">
+						form="https://docs.google.com/forms/d/e/1FAIpQLSeLndwSZY7ny8glGb-5S54kOTiGvc9ZK71bu_lgAEr_StS1yQ/formResponse?entry.439650267=First+Last&entry.1115130537=0123456789&entry.954728993=email@email.com&pageHistory=1,0&back=1">
 		
 		</script>
 		<script>
@@ -31,26 +16,7 @@
 				ifrm.setAttribute("name", "swallow");
 				document.body.appendChild(ifrm);
 				ifrm.style.display = 'none';
-				document.forms[0].target="swallow";
-				var button = document.querySelectorAll("div[role='button']")[0];
-				var i,j;
-				var dat=new FormData(document.forms[0]);
-				var arkey=new Array();
-				var arval=new Array();
-				var arent=new Array();
 				
-				button.addEventListener("click", function(){
-					for (var k of dat.keys()){
-						arkey.push(k);
-					}
-					for (var v of dat.values()){
-						arval.push(v);
-					}
-					for (var en of document.forms[0].elements){
-						arent.push(en.value);
-					}
-					alert('Keys: '+arkey.join()+'\nValues: '+arval.join()+'\nEntries: '+arent.join());
-				}, true);
 			})();
 		</script>
 	</body>
