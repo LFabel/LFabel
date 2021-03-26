@@ -1,4 +1,3 @@
-
 (function (XHR) {
     let us = new Intl.Locale("en");
     var open = XHR.prototype.open;
