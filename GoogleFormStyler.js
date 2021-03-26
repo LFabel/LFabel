@@ -1,5 +1,4 @@
 (function (XHR) {
-    let us = new Intl.Locale("en");
     var open = XHR.prototype.open;
     XHR.prototype.open = function (method, url, async, user, pass) {
         this._url = url;
@@ -11,7 +10,6 @@
     };
 })(XMLHttpRequest);
 (function() {
-    let us = new Intl.Locale("en");
     var script = document.currentScript ||
         /*Polyfill*/ Array.prototype.slice.call(document.getElementsByTagName('script')).pop();
     var URL = script.getAttribute('form');
